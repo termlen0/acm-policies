@@ -28,7 +28,7 @@ spec:
               kind: Namespace # must not have namespace 'prod'
               apiVersion: v1
               metadata:
-                name: prod
+                name: mortgage
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
@@ -55,4 +55,4 @@ spec:
     type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
-      []  # selects all clusters if not specified
+      ['cluster-1']  # selects all clusters if not specified
